@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/index-style.css">
+</head>
+<body>
+    
+    <div class="w-75 mx-auto py-4 text-info fw-bold">
+        <h1 class="py-4 fw-bold">Product Management System</h1>
+        <div id="emptyName" class="alert alert-info"></div>
+        <div id="emptyPrice" class="alert alert-info"></div>
+        <div id="emptyCat" class="alert alert-info"></div>
+        <div id="emptyDesc" class="alert alert-info"></div>
+        <label for="productNameInput" class="mb-2">Product Name :</label>
+        <input oninput="validateProductName();" class="form-control mb-3" type="text" name="productNameInput" id="productNameInput">
+        
+        <label for="productPriceInput" class="mb-2">Product Price :</label>
+        <input class="form-control mb-3" type="number" name="productPriceInput" id="productPriceInput">
+        
+        <label for="productCategotyInput" class="mb-2">Product Category :</label>
+        <input class="form-control mb-3" type="text" name="productCategotyInput" id="productCategotyInput">
+        
+        <label for="productDescriptionInput" class="mb-2">Product Description :</label>
+        <input class="form-control mb-4" type="text" name="productDescriptionInput" id="productDescriptionInput">
+
+        <button id="addBtn" onclick="addProduct();" class="btn btn-outline-info" type="submit">Add Product</button>
+        <button id="updateBtn" onclick="updateProduct()" class="btn btn-outline-warning d-none" type="submit">Update Product</button>
+    </div>
+
+    <div class="w-75 text-info mx-auto my-4 mb-5 fw-bold">
+        <label for="searchProduct">Search :</label>
+        <input oninput="searchProducts(this.value)" class="form-control my-2" type="search" name="searchProduct" placeholder="Search by name" id="searchProduct">
+    </div>
+
+    <div class="w-75 mx-auto">
+        <table class="table">
+            <thead class="text-info">
+                <th>Index</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th class="text-warning">Update</th>
+                <th class="text-danger">Delete</th>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/mean.js"></script>
+</body>
+</html>

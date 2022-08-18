@@ -1,0 +1,15 @@
+body{
+    background-color: #262936;
+}
+table, input, label, textarea, div{
+    color: #fff!important;
+    background-color: transparent!important;
+}
+table{
+    border: #262936!important;
+}
+.alert{
+    height: 50px;
+    text-align: center;
+    margin: 15px 0px;
+}
